@@ -42,14 +42,14 @@ public class AppHw3 {
         // после ввода выполнения метод, соответствующий указанному номеру со случайным значением аргументов;
         boolean isRightChoise = false;
         int choise = 0;
-        while (!isRightChoise) {
+        while (true) {
             Scanner sc = new Scanner(System.in);
             System.out.print("Введите число от 1 до 5: ");
             //Тут всё таки по идее либо nextLine а потом проверять что может parseInt и обернуть исключениями
             //но вроде как это не проходили, поэтому оставляю так
             choise = sc.nextInt();
             if (choise >= 1 && choise <= 5) {
-                isRightChoise = true;
+
                 break;
             }
             else {
@@ -116,7 +116,7 @@ public class AppHw3 {
 
         if (data <= 10) {
             System.out.println("Красный");
-        } else if (data > 10 && data <= 20) {
+        } else if (data  10 && data <= 20) {
             System.out.println("Желтый");
         } else {
             System.out.println("Зеленый");
