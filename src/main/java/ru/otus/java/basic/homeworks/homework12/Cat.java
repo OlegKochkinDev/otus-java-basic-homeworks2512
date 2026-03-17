@@ -11,7 +11,6 @@ public class Cat {
     }
 
     public boolean eat(Plate plate){
-        //System.out.println(name + " кушает из тарелки. Количество еды в тарелке: " + plate.getCurrentFoodAmount() + ". Аппетит кота: " + appetite);
         if (plate.getCurrentFoodAmount() < appetite){
             return false;
         } else{

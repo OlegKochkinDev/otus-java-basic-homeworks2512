@@ -18,12 +18,8 @@ public class Plate {
 
     public boolean deacreaseFood(int foodAmount) {
         this.currentFoodAmount -= foodAmount;
-        if (this.currentFoodAmount < 0) {
-            this.currentFoodAmount = 0;
-            return false;
-        } else{
-            return true;
-        }
+        return this.currentFoodAmount >= 0;
+
     }
 
     public int getCurrentFoodAmount() {
