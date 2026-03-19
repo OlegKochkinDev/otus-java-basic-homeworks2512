@@ -26,40 +26,22 @@ public class Calculation implements Runnable {
         int end = 0;
         int size = array.length / threadCount;
         start = threadNum * size;
-        end = (threadNum == threadCount - 1) ? array.length-1 : (threadNum + 1) * size - 1;
-
-        if (threadCount == 1 ) {
+        end = (threadNum == threadCount - 1) ? array.length - 1 : (threadNum + 1) * size - 1;
+        System.out.println(threadName + " started");
+        if (threadCount == 1) {
             start = 0;
             end = array.length - 1;
         }
 
-
-        System.out.println("["+this.threadName+"]"+ " start at " + new Date());
         System.out.println("    RANGE " + start + " to " + end + " element");
         for (int i = start; i <= end; i++) {
             array[i] = 1.14 * Math.cos(i) * Math.sin(i * 0.2) * Math.cos(i / 1.2);
         }
-        System.out.println("["+this.threadName+"]"+ " finished at " + new Date());
-
     }
 
-    public void run(){
-        /*int max = array.length;
-
-        int parts = threadCount;
-
-
-
-        int size = max / parts;
-
-        end = (threadNum == parts - 1) ? max-1 : (threadNum + 1) * size - 1;
-        System.out.println("    RANGE " + start + " to " + end + " element");
+    public void run() {
         calc();
-        System.out.println("["+this.threadName+"]"+ " finished at " + new Date());
-        */
-         calc();
     }
-
 
 
 }
