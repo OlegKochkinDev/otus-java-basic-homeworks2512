@@ -4,9 +4,6 @@ import java.util.Scanner;
 
 public class Calculator {
 
-
-
-
     public static float calculate(float first, float second, char operator) {
         float result = 0;
         switch (operator) {
@@ -56,10 +53,7 @@ public class Calculator {
        char operator = 0;
        int operatorIndex = -1;
 
-       float result = 0;
-
-
-        // ищем оператор
+        float result = 0;
         for (int i = 0; i < string.length(); i++) {
             char c = string.charAt(i);
             if (c == '+' || c == '-' || c == '*' || c == '/') {
